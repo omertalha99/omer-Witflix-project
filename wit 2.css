@@ -1,0 +1,666 @@
+/* Genel Stil Ayarları */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+body {
+  
+  background-color: white;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  height: 230vh;
+
+}
+
+.dark-mode {
+
+  background-color: black;
+  opacity: 0.85;
+}
+
+/* Butonlar */
+
+button, .button2 {
+  border: none; /* Sınırı kaldırır */
+  outline: none; /* Butona tıklandığında oluşan odak çerçevesini kaldırır */
+ 
+  padding: 20px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.age { height: 20px;
+  width: 30px;
+  border: 1px solid #7d706d; /* 2px kalınlık, düz çizgi ve turuncu renk */
+  padding: 1px; /* İçerikten kenarlık mesafesi */
+  border-radius: 20%;}
+#playButton {
+  position: relative;
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  color: white;
+  right: 80px;
+
+}
+button:hover {
+  background-color: #5c1e1e;
+}
+
+
+.button2:hover {
+  background-color: #242323;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #c93838;
+  color: #b47272;
+  text-align: center;
+}
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 25vh;
+  background-color: #c3bebe;
+  display: flex;
+  align-items: center; /* Dikeyde ortalama */
+  justify-content: space-between; /* h1, menu ve button-container'ı yan yana hizala */
+  padding: 0 40px; /* Kenarlardan boşluk bırak */
+  border-bottom: 2px solid #e98e8e;
+}
+
+/* Başlık (Logo) */
+h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 130px;
+  color: #FF0000;
+  margin: 0;
+}
+
+/* Menü */
+.menu {
+  display: flex;
+  gap: 30px; /* Menü öğeleri arasındaki boşluk */
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  gap: 15px; /* Butonlar arasındaki boşluk */
+  align-items: center;
+}
+
+.menu h2 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+ 
+  
+}
+.menu a{
+  color: black;
+}
+.topnav{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Yatayda ortalama */
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 5px;
+ 
+}
+/* Ana İçerik */
+.featured-content {
+  height: auto;
+  width: 100%;
+  background: linear-gradient(to bottom, #865d5d, transparent);
+  color: white;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.poster-container {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.poster-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.movie-info {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  
+  top: 30px; /* Yukarıdan sabit boşluk bırakıldı */
+  right: 300px; /* Soldan sabit boşluk bırakıldı */
+  font-size: 14px;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 8px; 
+  border-color: #000000;
+  width: 2000px;
+  height: auto;
+  padding: 10px; /* İçerik hizalaması için padding eklendi */
+  max-width: 50%; /* İçeriğin poster üzerindeki alanını sınırlandırır */
+  
+}
+
+.yıldızandsure {
+  position: relative;
+  align-items: center;
+  bottom: 10px;
+ display: flex;
+ gap: 10px;
+  color: #000000;
+  padding-top: 20px;
+
+}
+
+#movieRating {
+  color: rgb(226, 226, 66);
+  top: 10px;
+  font-size: 20px;
+}
+.kurumpuan{
+  padding-top: 0px;
+}
+#movieTitle {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0e0909;
+}
+
+#age2 {
+  border: 1px solid #7d706d; /* 2px kalınlık, düz çizgi ve turuncu renk */
+  padding: 1px; /* İçerikten kenarlık mesafesi */
+  border-radius: 20%;
+  width: auto;
+  height: auto;
+}
+
+.details-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#starring, #moviegenre, #tags {
+  font-weight: bold;
+  color: #000000;
+}
+
+.filmicerigi {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+}
+
+.listelist, .details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  color: rgb(255, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  width: max-content;
+  justify-content: baseline;
+}
+.yanbaslık, .yanbaslık2 {
+  padding-top: 15px;
+  position: absolute;
+  right: 20px;
+   text-align: center;
+    font-weight: bold;
+    height: 10px;
+    width: auto;
+    text-decoration: none;
+    color: #000000;
+    
+    
+}
+.titles-container {
+ position: absolute;
+    display: flex;
+    flex-direction: column; /* Başlıkları dikey hizalar */
+    gap: 225px; /* Başlıklar arası boşluk */
+    margin-left: 20px;
+  
+}
+
+
+/* Başlıkların stilini belirlemek için */
+#yantitle, #yantitle2 {
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+
+}
+
+.popular-movies {
+
+  display: flex;
+  height: 200px;
+  align-items: center; 
+  justify-content: center; 
+  gap: 300px; /* Film elemanları arasındaki boşluk */
+  flex-wrap: wrap; /* İçeriği kaydırarak taşıma */
+  width: 100%; /* Tam genişlik */
+  padding-top:25px;
+  
+}
+
+.recommended-movies {
+ 
+  display: flex;
+  height: 200px;
+  align-items: center; 
+  justify-content: center; 
+  gap: 300px; /* Film elemanları arasındaki boşluk */
+  flex-wrap: wrap; /* İçeriği kaydırarak taşıma */
+  width: 100%; /* Tam genişlik */
+  padding-top: 25px;
+}
+.moviessection { 
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px; /* Bölümler arasındaki boşluk */
+  
+ 
+}
+
+/* Her bir film elemanını düzenlemek için */
+.movie-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px; /* Eleman genişliği */
+  background-color: #ddd;
+  overflow: hidden;
+  border-radius: 10%;
+  position: relative;
+  
+  
+}
+
+.movie-list-item-img {
+  width: 100%;
+  height: 200px; /* Sabit yükseklik */
+}
+
+.movie-list-item-title, 
+.movie-list-item-desc {
+  position: absolute; 
+  color: white;
+  padding: 5px;
+  text-align: left;
+  width: auto;
+  left: 5px; /* Soldan 5px boşluk */
+}
+
+.movie-list-item-title {
+  top: 10px; /* Üstten 10px boşluk */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.movie-list-item-desc {
+  bottom: 40px; /* Alt kenardan 40px yukarıda */
+  font-size: 0.9em;
+}
+
+.movie-list-item-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px; /* Daha küçük bir boyut için padding ayarlandı */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute; /* Butonun sabit konumlandırılması için */
+  bottom: 10px; /* Alt kenardan 10px yukarıda */
+  left: 10px; /* Soldan 10px boşluk */
+  transform: none; /* Merkezden kaydırmayı kaldırıyoruz */
+  width: auto; /* Butonun doğal genişliği */
+  text-align: center;
+}
+
+/* Sağ üst köşe bilgisi */
+.info-box {
+  display: flex;
+    position: absolute;
+    align-items: center;
+    top: 40px; /* Başlık altına yerleştirme */
+    left: 10px; /* Soldan aynı hizaya getirme */
+    display: flex;
+    gap: 10px; /* Age ve time arasındaki boşluk */
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+.footer{
+ height: 30vh;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    flex-wrap: wrap;
+    z-index: 2;
+   
+    
+}
+.row{
+  padding-top: 20px;
+  padding-left: 30px;
+	display: flex;
+  float: left;
+  gap: 100px;
+
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #eee9e9;
+  
+
+}
+.footer-col2 {
+  position: relative;
+  display: flex;
+  left: 100px;
+  
+}
+.footer-col{
+ display: contents;
+
+   width: 100%;
+   padding-left: 10px;
+
+}
+.footer-col2 .social-links2 {
+  font-size: 40px;
+  display: flex; /* İkonları yatay hizalar */
+  gap: 10px; /* İkonlar arasındaki boşluk */
+  justify-content: left; /* İkonları sola hizalar */
+  margin-top: 60px; /* h4 başlığından biraz boşluk bırakır */
+ position: relative;
+ right: 100px;
+ color: #000000;
+}
+
+.footer-col2 .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.footer-col2 .social-links a:hover {
+  color: #1548c9;
+  text-decoration: none;
+}
+
+.footer-col h4{
+	font-size: 18px;
+	color: #000000;
+	text-transform: capitalize;
+	margin-bottom: 45px;
+  font-weight: 700;
+	position: relative;
+  text-decoration: none;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+  text-decoration: none;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+  font-weight: 700;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 700;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a {
+	display: inline-flex; /* Flex kutu içeriği için */
+	align-items: center; /* İkonları dikeyde ortalar */
+	justify-content: center; /* İkonları yatayda ortalar */
+	height: 40px;
+	width: 40px;
+
+	margin: 0; /* Önceki margin kaldırıldı */
+	border-radius: 50%;
+	color: #000000;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #000000;
+}
+#usparagraph
+ {
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  max-width: 700px;
+  color: #000000;
+ }
+ .footer-col3 .social-links3{
+  color: #000000;
+  
+  display: flex; /* İkonları yatay hizalar */
+  gap: 20px; /* İkonlar arasındaki boşluk */
+
+ position: relative;
+ right: 10px;
+ color: #000000;
+ height: 40%;
+}
+
+.footer-col2 h4 {
+  color: #000000;
+  font-weight: 700;
+}
+.footer-col3 h4 {
+  color: #000000;
+  font-weight: 700;
+}
+/* For Mobile */
+/* Mobil uyumluluk için */
+@media (max-width: 768px) {
+
+  /* Genel Ayarlar */
+  body {
+    font-size: 4px; /* Genel font boyutunu küçültme */
+    padding: 0 10px; /* Genel içerik kenar boşlukları */
+  }
+
+  .movie-list-item-button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px; 
+    border: none;
+    font-size: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute; /* Butonun sabit konumlandırılması için */
+    bottom: 10px; /* Alt kenardan 10px yukarıda */
+    left: 10px; /* Soldan 10px boşluk */
+    transform: none; /* Merkezden kaydırmayı kaldırıyoruz */
+    width: 40px; /* Butonun doğal genişliği */
+    height: 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+  /* Navbar */
+  .navbar {
+    height: 15vh;
+    padding: 0 20px;
+ 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 25px; /* Başlık boyutunu küçült */padding-right: 20px;
+  }
+
+  .menu {
+    gap: 15px; /* Menü öğeleri arası boşluk */
+    padding-right: 5px;
+  }
+
+  .menu h2 {
+    font-size: 10px;
+  
+  }
+  .poster-container {
+    height: 50vh;
+  }
+
+  .movie-info {
+    font-size: 12px;
+    padding: 10px;
+    max-width: 90%; /* İçeriği ekranın genişliğine göre sınırlandır */
+    right: 0;
+    background-color: unset;
+  }
+  .listelist{
+    font-size: 12px;
+  }
+  .details{
+    font-size: 12px;
+  }
+
+  .age2{
+    border-width: 10px;
+  }
+  #movieTitle {
+    font-size: 24px; /* Başlık boyutunu küçült */
+  }
+
+  #movieRating {
+    font-size: 10px;
+  }
+
+  .yıldızandsure {
+    gap: 5px;
+    padding-top: 10px;
+    font-size: 9px;
+    height: 1px;
+  }
+
+  /* Film Elemanları */
+  .movie-list-item {
+    width: 100px; /* Eleman genişliğini küçült */
+    height: 100px;
+  }
+
+  .movie-list-item-title {
+    font-size: 1em;
+  }
+
+  .movie-list-item-desc {
+    font-size: 0.8em;
+  }
+
+  /* Footer */
+  .footer {
+    height: 20vh;
+    padding: 20px;
+  }
+
+  .footer-col h4 {
+  	font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul li a {
+    flex-wrap: wrap;
+    font-size: 18px;
+  }
+
+  .social-links a {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* Sosyal Medya İkonları */
+  .footer-col2 .social-links, 
+  .footer-col3 .social-links3 {
+    gap: 5px;
+  }
+.footer h4 { flex-wrap: wrap;
+  font-size: 18px;}
+
+  #usparagraph{
+
+    overflow: hidden;
+  flex-wrap: wrap;
+  font-size: 18px;
+  }
+}
+
+.footer-col2 h4 {
+  font-size: 18px;
+}
+
+
+
+
+
